@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  # Session controller
+
+  get 'sessions/new'
+
+  post 'sessions/create'
+
+  delete 'sessions/destroy'
+
   get 'users/index'
 
   get 'users/show'
