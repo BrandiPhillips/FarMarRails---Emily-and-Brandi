@@ -1,10 +1,9 @@
 <h1>Welcome to FarMar!</h1>
 <p>Please create a new session by entering your information:</p>
 
-<%= form_for(:session, url: sessions_create_path) do |f| %>
+<%= form_for(:session, url: sessions_create_path(:user_type => @user)) do |f| %>
 
-  <%= f.label :type %>
-  <%= f.text_field :type %>
+  <%= @user %>
 
   <%= f.label :id %>
   <%= f.text_field :id %>
