@@ -6,21 +6,25 @@ class UsersController < ApplicationController
   def show
     @market = Market.find(params[:id])
     puts "Market: #{@market}"
+
+    # user, market, vendor
+    #if user > search_market
+    # if market, redirect to MarketsController/index
+    #if vendor, redirect to vendorcontroller/index
   end
 
-  def new
+  def show
+    #market attribute list with vendors
+
   end
 
   def create
 
   end
 
-  def edit
+  def search_market
+      #show market list dropdown
   end
 
-  def update
-  end
 
-  def destroy
-  end
 end

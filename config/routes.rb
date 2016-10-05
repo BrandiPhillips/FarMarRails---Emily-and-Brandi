@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
+  root to: 'sessions#index'
 
   # Session controller
 
+  get 'sessions/index'
+
   get 'sessions/new'
 
-  post 'sessions/create'
+  post 'sessions/create' => 'sessions#create'
 
   delete 'sessions/destroy'
 
-  get 'users/index'
+  get 'users/index' => 'users#index'
 
   get 'users/show/:id' => "users#show", as: "users_show"
 
