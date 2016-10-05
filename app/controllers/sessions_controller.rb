@@ -1,4 +1,15 @@
 class SessionsController < ApplicationController
+  def index
+    case :user_type
+      when 'user'
+        redirect_to users_search_path
+      when 'market'
+        redirect_to create_session_path
+      when 'vendor'
+        redirect_to create_session_path
+    end
+  end
+
   def new
   end
 
