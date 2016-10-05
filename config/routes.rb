@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'users/index' => 'users#index'
 
-  get 'users/show'
+  get 'users/show/:id' => "users#show", as: "users_show"
 
   get 'users/new'
 
