@@ -8,15 +8,18 @@ class MarketsController < ApplicationController
 
   def new
     @market = Market.new
+    @method = 'post'
+    @path = markets_create_path
   end
 
   def create
     @market = Market.create(name: params[:market][:name], address: params[:market][:address], city: params[:market][:city], county: params[:market][:county], state: params[:market][:state], zip: params[:market][:zip])
-
   end
 
   def edit
     @market = Market.find(params[:id])
+    @method = 'put'
+    @path = markets_update_path(@market.id)
   end
 
 #{}"market"=>{"name"=>"Quincy Farmers Market", "address"=>"0 Denis Ryan Parkway", "city"=>"Quincy", "county"=>"Norfolk", "state"=>"Massachusetts", "zip"=>"21690"}

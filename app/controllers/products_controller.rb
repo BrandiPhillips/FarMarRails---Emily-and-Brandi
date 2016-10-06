@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @method = 'post'
+    @path = products_create_path
   end
 
   def create
@@ -16,6 +18,8 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @method = 'put'
+    @path = products_update_path
   end
 
   def update

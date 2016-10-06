@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @market = Market.new
     @markets = Market.all
   end
 
