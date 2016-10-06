@@ -1,4 +1,16 @@
-<h1>Vendors#new</h1>
-<p><%= "Hi #{current_user.name}! Let's create a new vendor for your market." %></p>
+<h1><%= "#{current_user.name}" %> </h1>
+<h2><%= "Let's create a new vendor for your market." %></h2>
 
-<p>Form goes here</p>
+<section>
+<%= form_for @market_vendor, url:  { action: 'create' },  html: { class: "vendor_create" } do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label "number of Employees" %>
+  <%= f.number_field :num_employees %>
+
+  <%= f.hidden_field :market_id, :value => current_user.id %>
+
+  <%= f.submit %>
+<% end %>
+</section>

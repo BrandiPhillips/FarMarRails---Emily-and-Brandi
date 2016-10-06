@@ -55,11 +55,11 @@ Rails.application.routes.draw do
 
   get 'vendors/index'
 
-  get 'vendors/show'
+  get 'vendors/show' 
 
-  get 'vendors/new'
+  post 'vendors/new' => 'vendors#new', as: 'new_vendor'
 
-  get 'vendors/create'
+  post 'vendors/create'
 
   get 'vendors/edit'
 
