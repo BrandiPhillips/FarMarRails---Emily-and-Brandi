@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'sessions#index'
 
-  # Session controller
+  # Session controller routes
 
   get 'sessions/index'
 
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post 'sessions/create' => 'sessions#create'
 
   delete 'sessions/destroy'
+
+  # User controller routes
 
   get 'users/index' => 'users#index'
 
@@ -25,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
+  # Sales controller routes
+
   get 'sales/index'
 
   get 'sales/show'
@@ -38,6 +42,8 @@ Rails.application.routes.draw do
   get 'sales/update'
 
   get 'sales/destroy'
+
+  # Product controller routes
 
   get 'products/index'
 
@@ -53,6 +59,8 @@ Rails.application.routes.draw do
 
   get 'products/destroy'
 
+  # Vendors controller routes
+
   get 'vendors/index'
 
   get 'vendors/show'
@@ -67,19 +75,21 @@ Rails.application.routes.draw do
 
   get 'vendors/destroy'
 
+  # Market controller routes
+
   get 'markets/index'
 
-  get 'markets/show'
+  get 'markets/show/:id' => 'markets#show', as: 'markets_show'
 
   get 'markets/new'
 
-  get 'markets/create'
+  post 'markets/create'
 
-  get 'markets/edit'
+  get 'markets/:id/edit'  => 'markets#edit', as: 'markets_edit'
 
-  get 'markets/update'
+  put 'markets/:id/update' => 'markets#update', as: 'markets_update'
 
-  get 'markets/destroy'
+  delete 'markets/:id/destroy' => 'markets#destroy', as: 'markets_destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

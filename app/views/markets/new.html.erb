@@ -1,4 +1,27 @@
-<h1>Markets#new</h1>
+<h1>Make a new market!</h1>
 
-<p><%= "Hi #{current_user.name}! Let's create a brand-new farmers market." %></p>
-<p>Form goes here</p>
+<p>Use the form below to create a new market. When you are done, press submit!</p>
+
+<section>
+<%= form_for @market, url: markets_create_path, method: :post do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+
+  <%= f.label :county %>
+  <%= f.text_field :county %>
+
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+
+  <%= f.submit %>
+  <% end %>
+</section>
