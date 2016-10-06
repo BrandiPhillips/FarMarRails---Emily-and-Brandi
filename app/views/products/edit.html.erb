@@ -3,10 +3,5 @@
 <p>Please edit the name of your new product in the space below. When you are finished, press submit!</p>
 
 <section>
-  <%= form_for @product, method: 'put', url: products_update_path do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.submit %>
-  <% end %>
+  <%= render partial: "productform" %>
 </section>

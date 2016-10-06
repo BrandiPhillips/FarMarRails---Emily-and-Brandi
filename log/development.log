@@ -40497,3 +40497,150 @@ Processing by MarketsController#index as HTML
   [1m[35mVendor Load (0.4ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."market_id" = ?  [["market_id", 103]]
   Rendered markets/index.html.erb within layouts/application (6.5ms)
 Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sessions/index" for ::1 at 2016-10-06 14:09:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 274ms (Views: 266.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/markets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/sales.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/markets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/sales.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-06 14:09:10 -0700
+
+
+Started GET "/sessions/new?user_type=vendor" for ::1 at 2016-10-06 14:09:12 -0700
+Processing by SessionsController#new as HTML
+  Parameters: {"user_type"=>"vendor"}
+  [1m[35mVendor Load (2.5ms)[0m  SELECT "vendors".* FROM "vendors"
+  Rendered sessions/new.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 106ms (Views: 102.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/sessions/create?user_type=vendor" for ::1 at 2016-10-06 14:09:16 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FXZD9j+8YMjQe2R/XzzZJLwuFpYZi6AHPjEMIXytA5uhhaw00ETb1jhjd8xhqs7oUep3Kaut9qwGklS8vURZrQ==", "session"=>{"id"=>"6"}, "commit"=>"Log in", "user_type"=>"vendor"}
+Redirected to http://localhost:3000/vendors/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/vendors/index" for ::1 at 2016-10-06 14:09:16 -0700
+Processing by VendorsController#index as HTML
+  [1m[36mVendor Load (0.2ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mMarket Load (0.1ms)[0m  [1mSELECT  "markets".* FROM "markets" WHERE "markets"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered vendors/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 55ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/index" for ::1 at 2016-10-06 14:09:18 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mVendor Load (0.1ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."vendor_id" = ?  [["vendor_id", 6]]
+  Rendered products/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/11/edit" for ::1 at 2016-10-06 14:09:21 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered products/_productform.html.erb (11.4ms)
+  Rendered products/edit.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/products/11/update" for ::1 at 2016-10-06 14:09:24 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GvV5ipoaXq3l80dUpT92VqqgIT02r1EV24jzT9ca386uBpZIdeLlsw3rVOebqWGaR2RAgoSJB77jK6vSFvOF+A==", "product"=>{"name"=>"Gigantic Breads"}, "commit"=>"Update Product", "id"=>"11"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "products" SET "name" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["name", "Gigantic Breads"], ["updated_at", "2016-10-06 21:09:24.319696"], ["id", 11]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/index
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/products/index" for ::1 at 2016-10-06 14:09:24 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mVendor Load (0.1ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."vendor_id" = ?  [["vendor_id", 6]]
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for ::1 at 2016-10-06 14:09:26 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_productform.html.erb (0.8ms)
+  Rendered products/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products/create" for ::1 at 2016-10-06 14:09:33 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HTun0tI73yZJFruQyWG3rLuW/bvTgyKM8YGH2wrYcQipyEgQPcNkOKEOqCP396BgVlKcBGGldCfJIt9GyzErPg==", "product"=>{"name"=>"Yummy Veggies"}, "commit"=>"Create Product"}
+  [1m[36mVendor Load (0.1ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "vendor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Yummy Veggies"], ["vendor_id", 6], ["created_at", "2016-10-06 21:09:33.205642"], ["updated_at", "2016-10-06 21:09:33.205642"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/index
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/products/index" for ::1 at 2016-10-06 14:09:33 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mVendor Load (0.1ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."vendor_id" = ?[0m  [["vendor_id", 6]]
+  Rendered products/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.5ms)
