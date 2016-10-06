@@ -1,2 +1,13 @@
-<h1>Sales#new</h1>
-<p>Find me in app/views/sales/new.html.erb</p>
+<h1>Add a new sale </h1>
+
+<section>
+  <%= form_for @sale, method: 'post', url: sales_create_path do |f| %>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+
+    <%= f.label :product_id %>
+    <%= f.collection_select :product_id, @vendor.products.all, :id, :name %>
+
+    <%= f.submit %>
+  <% end %>
+</section>
