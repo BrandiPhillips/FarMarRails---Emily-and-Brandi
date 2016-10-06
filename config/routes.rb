@@ -51,21 +51,21 @@ Rails.application.routes.draw do
 
   get 'products/update'
 
-  get 'products/destroy'
+  delete 'products/destroy'
 
   get 'vendors/index'
 
-  get 'vendors/show' 
+  get 'vendors/show'
 
   post 'vendors/new' => 'vendors#new', as: 'new_vendor'
 
   post 'vendors/create'
 
-  get 'vendors/edit'
+  get 'vendors/:id/edit' => 'vendors#edit', as: 'vendors_edit'
 
-  get 'vendors/update'
+  patch 'vendors/:id/update' => 'vendors#update', as: 'vendors_update'
 
-  get 'vendors/destroy'
+  delete 'vendors/:id/destroy' => 'vendors#destroy', as: 'vendors_destroy'
 
   get 'markets/index'
 

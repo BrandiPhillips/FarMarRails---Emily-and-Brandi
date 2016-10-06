@@ -34,12 +34,24 @@ class VendorsController < ApplicationController
   end
 
   def edit
+    @market_vendor = Vendor.find(params[:id])
   end
 
   def update
+    @params = params
+    @market_vendor = Vendor.find(params[:id])
+    @market_vendor.name = params['vendor']['name']
+    @market_vendor.num_employees = params['vendor']['num_employees']
+    @market_vendor.market_id = params['vendor']['market_id']
+    @market_vendor.save
+    redirect_to vendors_show_path
+
   end
 
   def destroy
+    @market_vendor = Vendor.find(params[:id])
+    @market_vendor.destroy
+    @destroy_msg = "Vendor successfully deleted."
   end
 
 end
