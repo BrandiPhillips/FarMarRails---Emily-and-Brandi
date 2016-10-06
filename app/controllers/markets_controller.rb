@@ -7,11 +7,7 @@ class MarketsController < ApplicationController
 
 
   def index
-<<<<<<< HEAD
-    @user = session[:user_id]
-=======
     @market = Market.find(current_user.id)
->>>>>>> 7f3e11205509a2fc9187ec67dbc62254049748c3
   end
 
   def show
