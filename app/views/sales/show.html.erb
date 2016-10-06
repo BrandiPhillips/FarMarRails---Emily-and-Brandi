@@ -10,7 +10,7 @@
 <% else%>
   <h1>All my sales</h1>
 
-  <p> Total sales: $<%= @vendor.total_sales/100.0%> </p>
+  <p> Total sales: $<%= "#{format("%.2f", @vendor.total_sales/100.0)}"%> </p>
 
   <% @vendor.sales.each do |sale| %>
     <p><%= "ID: #{sale.id}, Amount: $#{format("%.2f", sale.amount/100.0)}, Product: #{sale.product.name}, Sold at: #{sale.purchase_time}" %></p>
