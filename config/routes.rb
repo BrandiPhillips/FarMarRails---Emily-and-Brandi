@@ -35,29 +35,29 @@ Rails.application.routes.draw do
 
   get 'sales/new'
 
-  get 'sales/create'
+  post 'sales/create'
 
-  get 'sales/edit'
+  get 'sales/:id/edit' => 'sales#edit'
 
-  get 'sales/update'
+  put 'sales/:id/update' => 'sales#update'
 
-  get 'sales/destroy'
+  delete 'sales/:id/destroy' => 'sales#destroy'
 
   # Product controller routes
 
   get 'products/index'
 
-  get 'products/show'
+  get 'products/show/:id' => 'products#show', as: 'products_show'
 
   get 'products/new'
 
-  get 'products/create'
+  post 'products/create'
 
-  get 'products/edit'
+  get 'products/:id/edit' => 'products#edit', as: 'products_edit'
 
-  get 'products/update'
+  put 'products/:id/update' => 'products#update', as: 'products_update'
 
-  get 'products/destroy'
+  delete 'products/:id/destroy' => 'products#destroy', as: 'products_destroy'
 
   # Vendors controller routes
 
