@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
 
   def create
     @user = params[:user_type]
-    # user = {type: @user, id: params[:session][:id]}
-    # log_in (user)
+    user = {type: @user, id: params[:session][:id]}
+    log_in (user)
     if @user.downcase == "market"
       redirect_to markets_index_path
     elsif @user.downcase == "vendor"

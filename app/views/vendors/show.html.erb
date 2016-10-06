@@ -1,7 +1,21 @@
-<h1>Vendors#show</h1>
+<%#Vendors belonging to a Market %>
+<h1><%= "#{current_user.name}" %></h1>
 
-<p><%= "Hi #{current_user.name}! Here are the products you currently sell: " %></p>
 
-<p><% current_user.products.each do |product| %>
-  <p><%= "Name: #{product.name}, ID: #{product.id}" %></p>
-<%end%></p>
+<section>
+  <h2>Your Current Vendors</h2>
+  <p><% Vendor.current_user.each do |vendor| %>
+    <%= "#{vendor.name}, ID: #{vendor.id}, Number of employees: #{vendor.num_employees}" %>
+  </p>
+  <ul>
+    <li>
+      <%= button_to "Edit", vendor_edit_path(vendor.id), {:method => :get} %>
+    </li>
+    <li>
+      <%= button_to "Delete", {action: "destroy", id: vendor.id}, method: :delete, data: {confirm: "Are you sure you want to delete this vendor?" }%>
+    </li>
+  </ul>
+  <%end%>
+</section>
+
+<h3><%= link_to "Create New Vendor", vendor_new_path </h3>
