@@ -1,6 +1,16 @@
-<h1>"#{current_user.name}"</h1>
+<h1>Welcome, <%= @vendor.name %>!</h1>
 
-<p><%= "Hello, vendor #{current_user.name}! What would you like to do today?"%></p>
-<p><%= link_to "See my vendor stats", vendors_show_path(current_user.id)%></p>
-<p><%= link_to "Add, edit, or delete products", products_index_path %></p>
-<p><%= link_to "Add a new sale", sales_index_path %></p>
+
+<h2>According to our records...</h2>
+
+<ul>
+  <li>You have <%= @vendor.num_employees %> employees</li>
+  <li>You sell at <%= @vendor.market.name %> </li>
+  <li>Your vendor ID is: <%= @vendor.id %> </li>
+</ul>
+
+<p>To update any of this information, please contact the administrator of your market. Contact details for your market can be found at <%= link_to "#{@vendor.market.name}", users_show_path(@vendor.market.id) %>.</p>
+
+<h2>What would you like to do today?</h2>
+<p><%= link_to "Go to my products", products_index_path %></p>
+<p><%= link_to "Go to my sales", sales_index_path %></p>

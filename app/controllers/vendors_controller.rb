@@ -13,6 +13,7 @@ class VendorsController < ApplicationController
   # end
 
   def index
+    @vendor = Vendor.find(current_user.id)
   end
 
   def show

@@ -1,20 +1,19 @@
 class UsersController < ApplicationController
   def index
-    # user, market, vendor
-    #if user > search_market
-    # if market, redirect to MarketsController/index
-    #if vendor, redirect to vendorcontroller/index
+    @market = Market.new
+    @markets = Market.all
   end
 
   def show
-    #market attribute list with vendors
+    @market = Market.find(params[:id])
+  end
+
+  def create
 
   end
 
   def search_market
-      #show market list dropdown
 
   end
-
 
 end

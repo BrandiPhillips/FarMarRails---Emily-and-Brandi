@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'sessions#index'
 
-  # Session controller
+  # Session controller routes
 
   get 'sessions/index'
 
@@ -11,9 +11,11 @@ Rails.application.routes.draw do
 
   delete 'sessions/destroy'
 
+  # User controller routes
+
   get 'users/index' => 'users#index'
 
-  get 'users/show'
+  get 'users/show/:id' => "users#show", as: "users_show"
 
   get 'users/new'
 
@@ -25,33 +27,39 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
+  # Sales controller routes
+
   get 'sales/index'
 
   get 'sales/show'
 
   get 'sales/new'
 
-  get 'sales/create'
+  post 'sales/create'
 
-  get 'sales/edit'
+  get 'sales/:id/edit' => 'sales#edit'
 
-  get 'sales/update'
+  put 'sales/:id/update' => 'sales#update'
 
-  get 'sales/destroy'
+  delete 'sales/:id/destroy' => 'sales#destroy'
+
+  # Product controller routes
 
   get 'products/index'
 
-  get 'products/show'
+  get 'products/show/:id' => 'products#show', as: 'products_show'
 
   get 'products/new'
 
-  get 'products/create'
+  post 'products/create'
 
-  get 'products/edit'
+  get 'products/:id/edit' => 'products#edit', as: 'products_edit'
 
-  get 'products/update'
+  put 'products/:id/update' => 'products#update', as: 'products_update'
 
-  delete 'products/destroy'
+  delete 'products/:id/destroy' => 'products#destroy', as: 'products_destroy'
+
+  # Vendors controller routes
 
   get 'vendors/index'
 
@@ -67,19 +75,21 @@ Rails.application.routes.draw do
 
   delete 'vendors/:id/destroy' => 'vendors#destroy', as: 'vendors_destroy'
 
+  # Market controller routes
+
   get 'markets/index'
 
-  get 'markets/show'
+  get 'markets/show/:id' => 'markets#show', as: 'markets_show'
 
   get 'markets/new'
 
-  get 'markets/create'
+  post 'markets/create'
 
-  get 'markets/edit'
+  get 'markets/:id/edit'  => 'markets#edit', as: 'markets_edit'
 
-  get 'markets/update'
+  put 'markets/:id/update' => 'markets#update', as: 'markets_update'
 
-  get 'markets/destroy'
+  delete 'markets/:id/destroy' => 'markets#destroy', as: 'markets_destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
