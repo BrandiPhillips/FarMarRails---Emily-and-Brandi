@@ -11,18 +11,3 @@
   <% end %>
 
 </ul>
-
-<form name="update-post" action="show" method="get">
-  <label for="market">Market:</label>
-
-  <select name="id">
-    <%= @markets.each do |market| %>
-      <option value="<%= market.id %>"><%= market.name %></option>
-    <% end %>
-  </select>
-
-  <button type="submit">Submit</button>
-  <input type="hidden" name="_method" value="GET">
-
-
-</form>
