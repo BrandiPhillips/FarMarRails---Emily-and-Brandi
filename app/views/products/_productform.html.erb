@@ -3,9 +3,17 @@
 <section class="product-form">
 
 <%= form_for @product, method: @method, url: @path do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div>
+  <ul>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+    <li>
+        <%= f.submit %>
+    </li>
+  </ul>
+</div>
 
-  <%= f.submit %>
 <% end %>
 </section>
