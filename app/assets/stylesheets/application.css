@@ -1,12 +1,19 @@
-body {
-  font-family: 'Gruppo', cursive;
-  text-align: center;
-}
+/*overall stuff*/
 
 header {
   background-color: #C5E0DC;
   margin: 0;
   overflow: auto;
+}
+
+body {
+  font-family: 'Gruppo', cursive;
+  text-align: center;
+}
+
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -27,13 +34,25 @@ h3 {
   text-decoration: none;
   margin: 20px;
   font-size: 1.5rem;
+  list-style-type: none;
 }
+
+li {
+  list-style-type: none;
+}
+
+.strong-text {
+  font-size: 2rem;
+}
+
+/****home page icon/link****/
 
 .home-button {
   float: right;
   margin: .5em;
 }
 
+/*****main page large icons*****/
 .nav {
   list-style: none;
   display: block;
@@ -46,12 +65,36 @@ h3 {
   list-style-type: none;
 }
 
+/******Form styling*******/
+
 .forms div {
   display: block;
   margin: 2rem;
   font-size: 1.5rem;
 }
 
+.product-form div {
+  display: block;
+}
+
+.product-form li {
+  display: inline-block;
+  margin: 2rem;
+}
+
+/******buttons*******/
+
+.edit-delete {
+  display: block;
+  margin-top: 1rem;
+}
+
+.edit-delete  li {
+  display: inline-block;
+  margin: 2rem;
+}
+
+/******back to vendor navigation*******/
 .vendor-show {
  height: 35rem;
  display: block;
@@ -63,9 +106,28 @@ h3 {
   margin: 20px;
 }
 
+/******vendor index********/
+
+.button p {
+  display: inline-block;
+  margin: 4rem;
+}
+.button a:link {
+  background-color: #E8DDCB;
+  color: #016563;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button a:hover, a:active {
+    background-color: #C5E0DC;
+}
+
+
+/******Footer styling******/
 .footer-container {
   background-color: #E08E79;
-  overflow: auto;
 }
 
 .footer-container nav {
@@ -90,11 +152,31 @@ h3 {
     display: inline-block;
 }
 
-
 .footer-container a:hover, a:active {
     background-color: #C5E0DC;
 }
+.social-media a:link, a:visited {
+    background-color: #E8DDCB;
+    color: #016563;
+    padding: 0px 0px;
+    display: inline-block;
+}
 
+.social-media a:hover, a:active {
+    background-color: #C5E0DC;
+}
+
+/******vindex footer*******/
+
+.back-button {
+  float:left;
+  margin: 2rem;
+}
+
+.social-media a {
+  float: right;
+  margin: 2rem;
+}
 
 
 
