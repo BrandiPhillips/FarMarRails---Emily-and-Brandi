@@ -14,7 +14,11 @@ module SessionsHelper
 
   def log_in(user)
     session[:user_type] = user[:type].downcase
-    session[:user_id] = user[:id].to_i
+    if session[:user_id] != nil
+      session[:user_id] = user[:id].to_i
+    else
+      session[:user_id] = nil
+    end
   end
 
   def current_user
@@ -28,6 +32,10 @@ module SessionsHelper
 
     return @current
 
+  end
+
+  def user_type
+    return session[:user_type]
   end
 
 end

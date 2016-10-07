@@ -12,6 +12,21 @@ class VendorsController < ApplicationController
   #   end
   # end
 
+  before_action :check_privileges, only: [:show, :new, :create, :edit, :update, :destroy]
+  before_action :check_privileges_vendor, only: [:index]
+
+  def check_privileges
+    if user_type != 'market'
+      render :file => 'public/404.html', :status => :not_found
+    end
+  end
+
+  def check_privileges_vendor
+    if user_type != 'vendor'
+      render :file => 'public/404.html', :status => :not_found
+    end
+  end
+
   def index
     @vendor = Vendor.find(current_user.id)
   end
