@@ -1,13 +1,16 @@
 <nav>
+
+  <div>
+    <%= link_to image_tag("home.svg", :alt => "Home", :class => "css"), sessions_index_path %>
+  </div>
+
   <ul>
+
     <li>
-      <%= link_to image_tag("home.svg", :alt => "Home", :class => "css"), sessions_index_path %>
+      <%= button_to "Vendor List", vendors_show_path %>
     </li>
     <li>
-      <%= link_to "Vendor List", vendors_show_path %>
-    </li>
-    <li>
-      <%= link_to "Market Page", markets_index_path %>
+      <%= button_to "Market Page", markets_index_path %>
     </li>
   </ul>
 </nav>

@@ -1,3 +1,39 @@
+body {
+  font-family: 'Gruppo', cursive;
+  background-color: #E08E79;
+}
+
+header {
+  background-color: #C5E0DC;
+
+}
+
+h1 {
+  font-family: 'Cabin Sketch';
+  color: #FFF;
+}
+
+footer {
+  background-color: #016563;
+}
+
+li a:link {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

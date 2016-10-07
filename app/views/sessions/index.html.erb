@@ -1,4 +1,4 @@
-<h1>Welcome to FarMar</h1>
+
 
 <nav>
   <ul>
@@ -6,10 +6,11 @@
       <%= link_to image_tag("guest.svg", :alt => "Guest", :class => "css"), users_index_path(:user_type =>'user') %>
     </li>
     <li>
-      <%= link_to image_tag("market.svg", :alt => "Markets", :class => "css"), sessions_new_path(:user_type => 'market') %>
+      <%= link_to image_tag("vendor2.svg", :alt => "Vendors", :class => "css"), sessions_new_path(:user_type => 'vendor') %>
     </li>
     <li>
-      <%= link_to image_tag("vendor.png", :alt => "Vendors", :class => "css"), sessions_new_path(:user_type => 'vendor') %>
+      <%= link_to image_tag("market.svg", :alt => "Markets", :class => "css"), sessions_new_path(:user_type => 'market') %>
     </li>
+
   </ul>
 </nav>
