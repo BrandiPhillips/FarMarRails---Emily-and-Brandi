@@ -65,7 +65,7 @@ Rails.application.routes.draw do
 
   get 'vendors/show'
 
-  post 'vendors/new' => 'vendors#new', as: 'new_vendor'
+  get 'vendors/new' => 'vendors#new', as: 'new_vendor'
 
   post 'vendors/create'
 
