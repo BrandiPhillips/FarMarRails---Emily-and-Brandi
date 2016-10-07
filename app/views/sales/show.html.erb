@@ -1,5 +1,7 @@
+<%= render 'shared/user_id_header' %>
+
 <% if @time_period == 'this_month' %>
-  <h1>Sales for <%= DateTime.now.strftime("%B %Y")%></h1>
+  <h2>Sales for <%= DateTime.now.strftime("%B %Y")%></h2>
 
   <p> Total for month to date: $<%= "#{format("%.2f", @vendor.this_months_sales/100.0)}"%> </p>
 
@@ -10,7 +12,7 @@
   <% end %>
 
 <% else%>
-  <h1>All my sales</h1>
+  <h2>All my sales</h2>
 
   <p> Total sales: $<%= "#{format("%.2f", @vendor.total_sales/100.0)}"%> </p>
 
