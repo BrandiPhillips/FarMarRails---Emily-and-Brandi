@@ -1,5 +1,6 @@
 body {
   font-family: 'Gruppo', cursive;
+  text-align: center;
 }
 
 header {
@@ -21,6 +22,13 @@ h1 {
   margin-left: 1em;
 }
 
+h3 {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
 .home-button {
   float: right;
   margin: .5em;
@@ -33,14 +41,31 @@ h1 {
   height: 30em;
 }
 
-li {
+.nav li {
   display: inline-block;
   list-style-type: none;
 }
 
+.forms div {
+  display: block;
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+
+.vendor-show {
+ height: 35rem;
+ display: block;
+ overflow: auto;
+}
+
+.vendor-show li {
+  display: inline-block;
+  margin: 20px;
+}
+
 .footer-container {
-  height: 5em;
   background-color: #E08E79;
+  overflow: auto;
 }
 
 .footer-container nav {
@@ -52,7 +77,7 @@ li {
 .footer-container li {
   display: inline-block;
   text-decoration: none;
-  margin: 10px;
+  margin: 20px;
   font-size: 1.5rem;
 }
 

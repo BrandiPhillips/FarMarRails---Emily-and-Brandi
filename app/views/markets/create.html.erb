@@ -1,4 +1,6 @@
 <h1>Market successfully created!</h1>
-<p>You have created <%= @market.name %>, with market ID of <%= @market.id %>.</p>
+<h2>You have created <%= @market.name %>, with market ID of <%= @market.id %>.</h2>
 <p>Want to sign is as the newly created market? <%= link_to "Go to login", sessions_index_path %> </p>
-<p>Or, stay logged in as <%= current_user.name %>: <%= link_to "Return to main page", markets_index_path %> </p>
+<p>Or, stay logged in as <%= current_user.name %>: <%= link_to
+
+<%= render "shared/mi_link" %>

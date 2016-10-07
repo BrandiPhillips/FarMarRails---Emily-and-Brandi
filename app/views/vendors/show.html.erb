@@ -2,22 +2,27 @@
 <h1><%= "#{current_user.name}" %></h1>
 
 
-<section>
+<section class="vendor-show">
   <h2>Your Current Vendors</h2>
 
+<ul>
+  <% @market.vendors.each do |vendor| %>
+    <li>
+      <%= "#{vendor.name},   ID: #{vendor.id},   Number of  employees:  #{vendor.num_employees}" %>
+    </li>
+    <div id="edit-vend">
+      <li >
+        <%= button_to "Edit", vendors_edit_path(vendor.id), {:method => :get} %>
+      </li>
+      <li>
+        <%= button_to "Delete", {action: "destroy", id: vendor.id}, method: :delete, data: {confirm: "Are you sure you want to delete this vendor?" }%>
+      </li>
+    </div>
 
-  <p><% @market.vendors.each do |vendor| %>
-    <%= "#{vendor.name}, ID: #{vendor.id}, Number of employees: #{vendor.num_employees}" %>
-  </p>
-  <ul>
-    <li>
-      <%= button_to "Edit", vendors_edit_path(vendor.id), {:method => :get} %>
-    </li>
-    <li>
-      <%= button_to "Delete", {action: "destroy", id: vendor.id}, method: :delete, data: {confirm: "Are you sure you want to delete this vendor?" }%>
-    </li>
   </ul>
   <%end%>
 </section>
 
-<h3><%= button_to "Create New Vendor", new_vendor_path %> </h3>
+<h3><%= link_to "Create New Vendor", new_vendor_path %> </h3>
+
+<%= render 'shared/mi_link' %>
