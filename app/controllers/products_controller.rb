@@ -1,12 +1,12 @@
 class ProductsController < ApplicationController
 
-  before_action :check_privileges
-
-  def check_privileges
-    if user_type != 'vendor'
-      render :file => 'public/404.html', :status => :not_found
-    end
-  end
+  # before_action :check_privileges
+  #
+  # def check_privileges
+  #   if user_type != 'vendor'
+  #     render :file => 'public/404.html', :status => :not_found
+  #   end
+  # end
 
   def index
   end

@@ -1,13 +1,13 @@
 class MarketsController < ApplicationController
   #before_action :get_id
 
-  before_action :check_privileges
-
-  def check_privileges
-    if user_type != 'market'
-      render :file => 'public/404.html', :status => :not_found
-    end
-  end
+  # before_action :check_privileges
+  #
+  # def check_privileges
+  #   if user_type != 'market'
+  #     render :file => 'public/404.html', :status => :not_found
+  #   end
+  # end
 
   def get_id
     @user = params[:user_type]
